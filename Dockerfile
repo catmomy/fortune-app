@@ -1,5 +1,5 @@
-# Tomcat 9 と Java 17 を使用する設定
-FROM tomcat:10.1-jdk17-openjdk-slim
+# Tomcat 10 と Java 21 を使用する設定
+FROM tomcat:10.1-jdk21-openjdk-slim
 # デフォルトのアプリを削除してスッキリさせる
 RUN rm -rf /usr/local/tomcat/webapps/*
 
@@ -10,4 +10,5 @@ COPY graduation_work3.war /usr/local/tomcat/webapps/ROOT.war
 # ポート 8080 を開放
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
+
 
